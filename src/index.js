@@ -4,11 +4,12 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 import CardList from './CardList';
+import {robots} from './robots';
 
 ReactDOM.render(
 
     <div>
-        <CardList />
+        <CardList robots={robots}/>
     </div>
 
     , document.getElementById('root'));
