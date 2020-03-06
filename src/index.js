@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import CardList from './CardList';
-import {robots} from './robots';
+import App from './App';
+
 
 ReactDOM.render(
 
-    <div>
-        <CardList robots={robots}/>
-    </div>
+    <App />
 
     , document.getElementById('root'));
 
