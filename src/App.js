@@ -5,24 +5,14 @@ import SearchBox from './SearchBox'
 
 class App extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-            robots: robots,
-            searchfield: ''
-        }
-    }
-
-    onSearchChange(event) {
-        console.log(event)
-    }
+    
 
     render() {
         return (
             <div className='tc'>
                 <h1 className='tc'>Robo Tings</h1>
-                <SearchBox searchChange={this.onSearchChange} />
-                <CardList robots={this.state.robots} />
+                <SearchBox  />
+                <CardList robots={robots} />
             </div>
         );
     }
