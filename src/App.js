@@ -13,16 +13,22 @@ class App extends Component {
         }
     }
 
-    onSearchChange(event) {
-        console.log(event)
+    //Methods YOU create must be in the format of a function
+    onSearchChange = (entry) => {
+        this.setState({ searchfield: entry.target.value });
     }
 
+    //This method is built into React, so it has different syntax
     render() {
+        const filteredRobots = robots.filter(robot => {
+            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+        })
+
         return (
-            <div className='tc'>
+            <div className='tc' >
                 <h1 className='tc'>Robo Tings</h1>
                 <SearchBox searchChange={this.onSearchChange} />
-                <CardList robots={this.state.robots} />
+                <CardList robots={filteredRobots} />
             </div>
         );
     }

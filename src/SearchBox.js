@@ -8,7 +8,8 @@ const SearchBox = ({ searchChange }) => {
                 className='pa2 bab--green bg-lightest-blue'
                 type="text"
                 placeholder="Search robots..."
-                onchange={searchChange}/>
+                onChange={searchChange}>
+            </input>
         </div>
 
     );
