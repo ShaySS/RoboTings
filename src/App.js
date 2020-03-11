@@ -26,7 +26,7 @@ class App extends Component {
 
         return (
             <div className='tc' >
-                <h1 className='tc'>Robo Tings</h1>
+                <h1 className='tc' style={{ color: "rgb(129, 204, 176)", fontFamily: "Vivaldi", fontSize: "50px" }} >Robo Tings</h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <CardList robots={filteredRobots} />
             </div>
